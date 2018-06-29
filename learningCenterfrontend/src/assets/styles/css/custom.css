@@ -1,0 +1,25 @@
+.top-menu, .top-menu-mobile {
+    background-color: #336699/*#663399E0*/ !important;
+}
+
+.c-green {
+    color: #7fb069 !important;
+}
+
+.button.c-green {
+    background-color: #7fb069 !important;
+    color: #FFF !important;
+}
+.button.c-green:hover {
+    background-color: #699953 !important;
+    color: #FFF !important;
+}
+
+.button.c-red {
+    background-color: #d62828 !important;
+    color: #FFF !important;
+}
+.button.c-red:hover {
+    background-color: #c01f1f !important;
+    color: #FFF !important;
+}
