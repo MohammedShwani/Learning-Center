@@ -1,0 +1,72 @@
+<div class="ui massive fixed inverted borderless menu top-menu">
+  <a class="header item" href="#"> Init::$siteName }}</a>
+  <a class="item Pages::$curPage == Pages::$home? ' active': '' }}" href=" Init::$siteUrl }}">Home</a>
+  <a class="item Pages::$curPage == Pages::$courses? ' active': '' }}" href=" Pages::pub(Pages::$courses) }}">Courses</a>
+  <a class="item" href="javascript:void(0)" onclick="openAboutModal()">About</a>
+  <div class="right menu">
+      <a class="item Pages::$curPage == Pages::$register? ' active': '' }}" href=" Pages::pub(Pages::$register) }}">Register</a>
+      <a class="item Pages::$curPage == Pages::$login? ' active': '' }}" href=" Pages::pub(Pages::$login) }}">Login</a>
+  </div>
+</div>
+<div class="ui sidebar vertical menu borderless">
+  <a class="item Pages::$curPage == Pages::$home? ' active': '' }}" href=" Init::$siteUrl }}">Home</a>
+  <a class="item Pages::$curPage == Pages::$courses? ' active': '' }}" href=" Pages::pub(Pages::$courses) }}">Courses</a>
+  <a class="item" href="javascript:void(0)" onclick="openAboutModal()">About</a>
+  <div class="item">
+      <a class="ui fluid large green submit button basic" href=" Pages::pub(Pages::$login) }}">Login</a>
+      <a class="ui fluid large green submit button register" href=" Pages::pub(Pages::$register) }}">Register</a>
+  </div>
+</div>
+<div class="ui massive fixed inverted borderless mobile only menu top-menu-mobile">
+  <a class="item" href="#" onclick="openSidebar()">
+      <i class="content icon"></i>
+      <a class="header item" href="#"> Init::$siteName }}</a>
+  </a>
+</div>
+
+<!-- About Modal -->
+<div class="ui tiny modal transition" id="about-modal">
+  <div class="ui icon header">
+      <img src=" Init::$siteUrl }}src/img/logo.png" class="ui centered image">
+      <br />
+      About  Init::$siteName }}
+  </div>
+  <div class="ui icon content">
+      <p>
+          We are working together to teach all of you everything about programming and computer skills
+      </p>
+  </div>
+  <div class="actions">
+      <div class="ui green ok inverted button">
+          Close
+      </div>
+  </div>
+</div>
+
+
+<script>
+  function openSidebar() {
+      $('.ui.sidebar').sidebar('toggle');
+  }
+
+  function openAboutModal() {
+      /* checks if the sidebar is not opend, if it is, then close the sidebar,
+         and wait for the animation of closing to finished, once completed open
+         about modal */
+      var el = $('.ui.sidebar');
+      if (!el.sidebar("is closed")) {
+
+          el.sidebar('setting', 'onHidden', function(){
+                  $('#about-modal')
+                      .modal('setting', 'closable', true)
+                      .modal('show')
+              })
+              .sidebar('toggle')
+
+      } else {
+          $('#about-modal')
+              .modal('setting', 'closable', true)
+              .modal('show')
+      }
+  }
+</script>
