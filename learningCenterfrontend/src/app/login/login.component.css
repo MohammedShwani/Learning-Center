@@ -1,0 +1,9 @@
+.column {
+    max-width: 450px;
+}
+.login-form {
+    margin-top: 7em !important;
+}
+.login-form a.button {
+    margin-top: 1em !important;
+}
