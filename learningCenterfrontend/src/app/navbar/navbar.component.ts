@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InitService } from '../init.service'
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  siteName = ""
 
-  constructor() { }
+  constructor(private appInit: InitService) { }
 
   ngOnInit() {
+    this.siteName = this.appInit.siteName
   }
 
 }
