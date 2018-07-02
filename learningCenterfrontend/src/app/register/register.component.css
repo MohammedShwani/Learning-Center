@@ -1,0 +1,10 @@
+.register-form {
+    margin-top: 7em !important;
+}
+
+.ui.image {
+    display: block;
+}
+.ui.image .button {
+    margin-top: 0.5em;
+}
