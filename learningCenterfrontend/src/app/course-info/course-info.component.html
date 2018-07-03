@@ -1,0 +1,104 @@
+<div class="ui main aligned" id="app">
+
+  <div class="background-nav">
+    <div class="ui container">
+      <div class="ui grid stackable">
+        <div class="eleven wide column">
+          <div class="ui items">
+            <div class="item">
+              <h1 class="ui inverted header title">Course Name: Basic programming skill you should know before|</h1>
+            </div>
+            <div class="item">
+              <h3 class="ui inverted header">A short descriptino about this course, this short discription is limitted in size, and it dosen't fil all in
+                this screen.</h3>
+            </div>
+            <div class="item">
+              <div class="content">
+                <span class="left floated inverted">
+                  <i class="user icon"></i>
+                  75 Enrolled
+                </span>
+                <span class="right floated inverted">
+                  <i class="calander icon"></i>
+                  Created On 20/09/2018
+                </span>
+              </div>
+            </div>
+            <div class="item">
+              <p class="ui inverted centered">
+                Created by
+                <a href="">Mohammed Yousif</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="ui container">
+    <div class="ui grid stackable" dir="rtl">
+      <div class="five wide column">
+        <div class="ui segment no-radius course-intro">
+          <img class="ui fluid image" src="assets/img/test.jpg">
+          <a href="javascript:void(0)" class="preview-container" onclick="openPreviewModal()">
+            Preview course
+            <i class="play icon"></i>
+          </a>
+          <div class="button-container">
+            <a class="ui c-green button fluid no-radius" href="Pages::pub(Pages::$courses .'/'. @courseUrl . Pages::$lessonsView) }}">Enroll Now</a>
+          </div>
+
+        </div>
+      </div>
+      <div class="eleven wide column" dir="auto">
+        <div class="ui message you-learn-container">
+          <div class="header">
+            What Will I Learn?
+          </div>
+          <div class="ui grid two column stackable">
+            <div class="column">
+              <ul class="ui list eight wide ">
+                <li>The basic of html</li>
+                <li>The basic of css</li>
+                <li>The basic of css</li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul class="ui list eight wide column">
+                <li>The basic of html</li>
+                <li>How to connect both</li>
+                <li>The basic of css</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="ui header">Requirements</h2>
+        <ul class="ui list eight wide ">
+          <li>You need to know the basics of using computer</li>
+          <li>You don't need any experence in programming</li>
+          <li>Have a program installed</li>
+        </ul>
+
+        <h2 class="ui header description-header">Description</h2>
+        <p>This is an html description of the course</p>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="ui standard modal scrolling transition preview-modal">
+  <div class="header">
+    Course Preview
+  </div>
+  <div class="content" style="padding: 0 !important;">
+    <iframe id="player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/4SKECXdzdeA?enablejsapi=1&showinfo=0&controls=0&rel=0&autoplay=1"
+      frameborder="0"></iframe>
+  </div>
+</div>

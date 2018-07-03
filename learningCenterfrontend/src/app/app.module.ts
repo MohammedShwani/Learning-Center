@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FooterComponent } from './footer/footer.component';
 import { CoursesComponent } from './courses/courses.component';
+import { CourseInfoComponent } from './course-info/course-info.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
-  { path: "courses", component: CoursesComponent }
+  { path: "courses", component: CoursesComponent },
+  { path: "courses/:course", component: CourseInfoComponent }
 ]
 
 @NgModule({
@@ -29,7 +31,8 @@ const routes: Routes = [
     LoginComponent,
     RegisterComponent,
     FooterComponent,
-    CoursesComponent
+    CoursesComponent,
+    CourseInfoComponent
   ],
   imports: [
     BrowserModule,

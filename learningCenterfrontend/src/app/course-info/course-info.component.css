@@ -1,0 +1,100 @@
+.course-intro {
+    margin-top: -10em !important;
+    padding: 3px !important;
+}
+
+.course-intro .preview-container {
+    display: inline-block;
+    padding: 0.5em 1em !important;
+    color: #d62828;
+    font-size: 1.2em;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+}
+.course-intro .preview-container:hover {
+    color: #be2121;
+}
+
+.background-nav {
+    background-color: #003049 !important;/*#ece4b7; #d36135;*/
+    padding-top: 5em;
+    padding-bottom: 4em;
+}
+
+.footer.segment {
+    margin-top: 10em !important;
+}
+
+.background-nav .item .header.title {
+    font-size: 3em;
+}
+
+.background-nav .inverted {
+    color: #FFF;
+}
+
+.background-nav .inverted a {
+    color: #dfdfdf;
+}
+.background-nav .inverted a:hover {
+    color: #FFF;
+}
+
+.background-nav .segment {
+    margin-top: 5em !important;
+}
+
+.button-container {
+    padding: 1.5em 1em;
+}
+.button-container .button {
+    margin: 0 !important;
+}
+
+.description-header {
+    margin-top: 2.5em !important;
+}
+
+.you-learn-container {
+    margin-top: 2em !important;
+}
+.you-learn-container .header {
+    margin-bottom: 0.5em !important;
+    font-size: 1.5em !important;
+}
+
+.preview-modal .content {
+    line-height: 0 !important;
+}
+.preview-modal iframe {
+    border: 0;
+    width: 100%;
+    min-height: 400px;
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+    .background-nav .item .header.title {
+        font-size: 2em;
+    }
+    .background-nav .segment {
+        margin-top: 0 !important;
+    }
+    .course-intro {
+        margin-top: -4em !important;
+    }
+    .you-learn-container {
+        margin-top: 1em !important;
+    }
+}
+
+/* Tablet / iPad Portrait */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .background-nav .item .header.title {
+        font-size: 2.5em;
+    }
+    .course-intro {
+        margin-top: -8em !important;
+    }
+}
