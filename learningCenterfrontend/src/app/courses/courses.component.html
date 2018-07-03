@@ -1,0 +1,60 @@
+<div id="background-nav">
+  <div class="ui container">
+      <div class="ui large breadcrumb centered" id="breadcrumb">
+          <span v-for="(path, key) in selctedPath">
+              <i v-show="key" class="right chevron icon divider"></i>
+              <a click="selectThisPath(key)" v-if="key < (selctedPath.length - 1)" class="section"><% path %></a>
+              <div v-else class="active section"><% path %></div>
+          </span>
+      </div>
+  </div>
+</div>
+
+<div class="ui main center aligned container">
+  <div class="ui grid stackable">
+      <div class="column four wide">
+
+          <div class="ui vertical menu fluid borderless" id="course-search-sidebar">
+              <h3 class="header item">
+                  <div v-show="showReturnBtn" class="return-back-btn" click="showMainCatagories()">
+                      <i class="arrow alternate circle left outline icon"></i>
+                  </div>
+                  <span><% categoriesHeader %></span>
+              </h3>
+              <a class="item no-radius" click="selectCat($event, index, cat.id)" v-for="(cat, index) in showedCategories">
+                  <% cat.name %>
+              </a>
+          </div>
+
+      </div>
+      <div class="column twelve wide">
+
+          <div class="ui link cards three stackable column">
+              <a class="card column" href="/courses/learn_cpp">
+                  <div class="image">
+                      <img src="assets/img/test.jpg">
+                  </div>
+                  <div class="content">
+                      <div class="header">Course Name</div>
+                      <div class="meta">
+                      <span>By Mohammed Yousif</span>
+                      </div>
+                      <div class="description">
+                      <p>A short Description about this course</p>
+                      </div>
+                  </div>
+                  <div class="extra content">
+                      <span class="left floated">
+                          <i class="user icon"></i>
+                          75 Enrolled
+                      </span>
+                      <span class="right floated">
+                          20/9/2018
+                      </span>
+                  </div>
+              </a>
+          </div>
+
+      </div>
+  </div>
+</div>
