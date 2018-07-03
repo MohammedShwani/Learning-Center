@@ -12,6 +12,7 @@ import { RegisterComponent } from './register/register.component';
 import { FooterComponent } from './footer/footer.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CourseInfoComponent } from './course-info/course-info.component';
+import { LessonsComponent } from './lessons/lessons.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
   { path: "courses", component: CoursesComponent },
-  { path: "courses/:course", component: CourseInfoComponent }
+  { path: "courses/:course", component: CourseInfoComponent },
+  { path: "courses/:course/lessons", component: LessonsComponent }
 ]
 
 @NgModule({
@@ -32,7 +34,8 @@ const routes: Routes = [
     RegisterComponent,
     FooterComponent,
     CoursesComponent,
-    CourseInfoComponent
+    CourseInfoComponent,
+    LessonsComponent
   ],
   imports: [
     BrowserModule,
