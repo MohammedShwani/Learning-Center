@@ -14,6 +14,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { CourseInfoComponent } from './course-info/course-info.component';
 import { LessonsComponent } from './lessons/lessons.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { HelperService } from './helper.service';
 
 
 const routes: Routes = [
@@ -45,7 +46,7 @@ const routes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [AppService],
+  providers: [AppService, HelperService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -13,8 +13,8 @@
                 <div class="field">
                     <div class="ui small image centered">
                         <img src="assets/img/logo.png" id="userImg">
-                        <input type="file" name="userImg" onchange="imgPreview(this, document.getElementById('userImg'))" id="selectUserImgBtn" hidden />
-                        <button type="button" class="ui basic button fluid small" onclick="document.getElementById('selectUserImgBtn').click()">Select an Image</button>
+                        <input type="file" name="userImg" (change)="helperService.imgPreview($event, 'userImg')" id="selectUserImgBtn" hidden />
+                        <button type="button" class="ui basic button fluid small" (click)="openImgSelectDialog()">Select an Image</button>
                     </div>
                 </div>
                 <div class="fields two column">
