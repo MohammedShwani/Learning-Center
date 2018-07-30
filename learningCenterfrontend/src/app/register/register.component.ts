@@ -26,8 +26,8 @@ export class RegisterComponent implements OnInit {
   }
 
   initSemanticUIFormValidationForRegister(onSuccessCallBack) {
-    $(document)
-    .ready(function() {
+
+    $(document).ready(function() {
 
         (<any>$('.ui.form.register'))
         .form({
@@ -106,10 +106,10 @@ export class RegisterComponent implements OnInit {
                     }
                 ]
             }
-        },onSuccess: onSuccessCallBack
+        }, onSuccess: onSuccessCallBack
         });
-        
     });
+
   }
 
 }
