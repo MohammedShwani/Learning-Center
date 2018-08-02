@@ -64,13 +64,18 @@
     font-size: 1.5em !important;
 }
 
-.preview-modal .content {
+#preview-modal .header {
+    border-radius: 0;
+    background-color: #336699;
+    color: #FFF;
+}
+#preview-modal .content {
     line-height: 0 !important;
 }
-.preview-modal iframe {
-    border: 0;
-    width: 100%;
-    min-height: 400px;
+#preview-modal .content div {
+    border: 0 !important;
+    width: 100% !important;
+    min-height: 400px !important;
 }
 
 /* Mobile */

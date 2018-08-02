@@ -15,6 +15,7 @@ import { CourseInfoComponent } from './course-info/course-info.component';
 import { LessonsComponent } from './lessons/lessons.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { HelperService } from './helper.service';
+import { NgxY2PlayerModule } from 'ngx-y2-player';
 
 
 const routes: Routes = [
@@ -44,6 +45,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
+    NgxY2PlayerModule,
     RouterModule.forRoot(routes)
   ],
   providers: [AppService, HelperService],

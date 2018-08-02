@@ -1,5 +1,4 @@
-<div class="ui main aligned" id="app">
-
+<div class="ui main aligned" id="course-info-container">
   <div class="background-nav">
     <div class="ui container">
       <div class="ui grid stackable">
@@ -43,7 +42,7 @@
       <div class="five wide column">
         <div class="ui segment no-radius course-intro">
           <img class="ui fluid image" src="assets/img/test.jpg">
-          <a href="javascript:void(0)" class="preview-container" onclick="openPreviewModal()">
+          <a href="javascript:void(0)" class="preview-container" (click)="openPreviewModal()">
             Preview course
             <i class="play icon"></i>
           </a>
@@ -93,12 +92,24 @@
 </div>
 
 
-<div class="ui standard modal scrolling transition preview-modal">
+<div class="ui standard modal scrolling transition" id="preview-modal">
   <div class="header">
     Course Preview
   </div>
   <div class="content" style="padding: 0 !important;">
-    <iframe id="player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/4SKECXdzdeA?enablejsapi=1&showinfo=0&controls=0&rel=0&autoplay=1"
-      frameborder="0"></iframe>
+    <div #container>
+      <ngx-y2-player
+        #video
+        [playerOptions]="playerOptions"
+        [container]="container"
+        (ready)="onReady($event)"
+        (change)="onStateChange($event)"
+        >
+      </ngx-y2-player>
+    </div>
+    <!--<iframe id="player" type="text/html" width="640" height="390" 
+      [src]="previewVideoSrc"
+      frameborder="0"></iframe>-->
+      
   </div>
 </div>
