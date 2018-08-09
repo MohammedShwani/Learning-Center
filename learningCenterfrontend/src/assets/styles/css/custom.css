@@ -15,6 +15,16 @@
     color: #FFF !important;
 }
 
+.button.basic.c-green {
+    border: 1px solid #7fb069;
+    background-color: #FFFFFF !important;
+    color: #7fb069 !important;
+}
+.button.basic.c-green:hover {
+    border: 1px solid #699953;
+    color: #699953 !important;
+}
+
 .button.c-red {
     background-color: #d62828 !important;
     color: #FFF !important;
