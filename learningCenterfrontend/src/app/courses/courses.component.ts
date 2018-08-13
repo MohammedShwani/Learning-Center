@@ -47,7 +47,7 @@ export class CoursesComponent implements OnInit {
 
   }
 
-  selectCat(event, index, catID) {console.log(index)
+  selectCat(event, index, catID) {
     this.eventParent = event.target.parentNode;
     /**In the code above, every time a category is selected, we update its parent.
      */
