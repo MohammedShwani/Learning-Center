@@ -1,10 +1,10 @@
 <div id="background-nav">
   <div class="ui container">
       <div class="ui large breadcrumb centered" id="breadcrumb">
-          <span v-for="(path, key) in selctedPath">
-              <i v-show="key" class="right chevron icon divider"></i>
-              <a click="selectThisPath(key)" v-if="key < (selctedPath.length - 1)" class="section"><% path %></a>
-              <div v-else class="active section"><% path %></div>
+          <span *ngFor="let path of selctedPath; let i = index">
+              <i *ngIf="i > 0" class="right chevron icon divider"></i>
+              <a (click)="selectThisBreadcrumbPath(i)" *ngIf="i < (selctedPath.length - 1); else breadcrumbHeaderElse" class="section">{{ path }}</a>
+              <ng-template #breadcrumbHeaderElse class="active section">{{ path }}</ng-template>
           </span>
       </div>
   </div>
@@ -16,13 +16,13 @@
 
           <div class="ui vertical menu fluid borderless" id="course-search-sidebar">
               <h3 class="header item">
-                  <div v-show="showReturnBtn" class="return-back-btn" click="showMainCatagories()">
+                  <div *ngIf="showReturnBtn" class="return-back-btn" (click)="showMainCatagories()">
                       <i class="arrow alternate circle left outline icon"></i>
                   </div>
-                  <span><% categoriesHeader %></span>
+                  <span>{{ categoriesHeader }}</span>
               </h3>
-              <a class="item no-radius" click="selectCat($event, index, cat.id)" v-for="(cat, index) in showedCategories">
-                  <% cat.name %>
+              <a class="item no-radius" (click)="selectCat($event, i, cat.id)" *ngFor="let cat of showedCategories; let i = index">
+                  {{ cat.name }}
               </a>
           </div>
 
